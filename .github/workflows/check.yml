@@ -44,11 +44,18 @@ jobs:
           echo "exit_code=${exit_code}" >> "$GITHUB_OUTPUT"
           exit 0
       - name: Upload coverage artifact
-        if: always()
+        if: ${{ !cancelled() }}
         uses: codecov/codecov-action@v7
         with:
           use_oidc: true
-          files: test-results/lcov.info
+          files: test-results/*.info
+      - name: Upload test artifact
+        if: ${{ !cancelled() }}
+        uses: codecov/codecov-action@v7
+        with:
+          use_oidc: true
+          report_type: test_results
+          files: test-results/*.xml
       - name: Fail on node test failure
         if: steps.node_test.outputs.exit_code != '0'
         run: |
