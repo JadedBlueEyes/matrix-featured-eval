@@ -39,7 +39,7 @@ jobs:
           set +e
           set -o pipefail
           pnpm run build
-          node --test --experimental-test-coverage --test-reporter=spec --test-reporter=junit --test-reporter=lcov --test-reporter-destination=stdout --test-reporter-destination=test-results/junit.xml --test-reporter-destination=lcov.info test/*.test.js 2>&1 | tee test-results/node-test.log
+          node --test --experimental-test-coverage --test-coverage-include=dist/** --test-reporter=spec --test-reporter=junit --test-reporter=lcov --test-reporter-destination=stdout --test-reporter-destination=test-results/junit.xml --test-reporter-destination=lcov.info test/*.test.js 2>&1 | tee test-results/node-test.log
           exit_code=${PIPESTATUS[0]}
           echo "exit_code=${exit_code}" >> "$GITHUB_OUTPUT"
           exit 0
