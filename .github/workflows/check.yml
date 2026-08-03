@@ -39,7 +39,7 @@ jobs:
           set +e
           set -o pipefail
           pnpm run build
-          node --test --enable-source-maps --experimental-test-coverage --test-coverage-include=dist/** --test-reporter=spec --test-reporter=junit --test-reporter=lcov --test-reporter-destination=stdout --test-reporter-destination=test-results/junit.xml --test-reporter-destination=lcov.info test/*.test.js 2>&1 | tee test-results/node-test.log
+          pnpm exec c8 --reporter=lcov --report-dir=test-results node --test --enable-source-maps --test-reporter=spec --test-reporter=junit --test-reporter-destination=stdout --test-reporter-destination=test-results/junit.xml test/*.test.js 2>&1 | tee test-results/node-test.log
           exit_code=${PIPESTATUS[0]}
           echo "exit_code=${exit_code}" >> "$GITHUB_OUTPUT"
           exit 0
@@ -48,6 +48,7 @@ jobs:
         uses: codecov/codecov-action@v7
         with:
           use_oidc: true
+          files: test-results/lcov.info
       - name: Fail on node test failure
         if: steps.node_test.outputs.exit_code != '0'
         run: |
