@@ -35,12 +35,11 @@ jobs:
       - name: Run node tests (spec + junit)
         id: node_test
         run: |
-          mkdir -p coverage
           mkdir -p test-results
           set +e
           set -o pipefail
           pnpm run build
-          node --test --experimental-test-coverage --test-reporter=spec --test-reporter=junit --test-reporter=lcov --test-reporter-destination=stdout --test-reporter-destination=test-results/junit.xml --test-reporter-destination=coverage/lcov.info test/*.test.js 2>&1 | tee test-results/node-test.log
+          node --test --experimental-test-coverage --test-reporter=spec --test-reporter=junit --test-reporter=lcov --test-reporter-destination=stdout --test-reporter-destination=test-results/junit.xml --test-reporter-destination=lcov.info test/*.test.js 2>&1 | tee test-results/node-test.log
           exit_code=${PIPESTATUS[0]}
           echo "exit_code=${exit_code}" >> "$GITHUB_OUTPUT"
           exit 0
@@ -49,14 +48,6 @@ jobs:
         uses: codecov/codecov-action@v7
         with:
           use_oidc: true
-      - name: Code Coverage Summary Report
-        if: always()
-        uses: irongut/CodeCoverageSummary@v1.3.0
-        with:
-          filename: coverage/*.info
-          indicators: false
-          format: markdown
-          badge: true
       - name: Fail on node test failure
         if: steps.node_test.outputs.exit_code != '0'
         run: |
