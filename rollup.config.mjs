@@ -10,10 +10,11 @@ export default [
     {
         input: "src/index.ts",
         output: [
-            { file: pkg.exports.require, format: "cjs" },
-            { file: pkg.exports.import, format: "es" },
+            { file: pkg.exports.require, format: "cjs", sourcemap: true },
+            { file: pkg.exports.import, format: "es", sourcemap: true },
         ],
         plugins: [typescript()],
         external,
+		
     }
 ];

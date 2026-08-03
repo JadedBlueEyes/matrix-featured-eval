@@ -13,7 +13,7 @@
     "build": "rollup -c",
     "prepublishOnly": "rollup -c",
     "dev": "rollup -c -w",
-    "test": "pnpm run build && node --test test/*.test.js",
+    "test": "pnpm run build && node --test --enable-source-maps test/*.test.js",
     "lint": "biome lint --write src test",
     "format": "biome format --write src test"
   },
