@@ -27,9 +27,6 @@ importers:
       c8:
         specifier: ^12.0.0
         version: 12.0.0
-      lcov-sourcemap-x:
-        specifier: ^0.3.3
-        version: 0.3.3
       rollup:
         specifier: ^4.62.4
         version: 4.62.4
@@ -388,10 +385,6 @@ packages:
   '@types/node@26.1.2':
     resolution: {integrity: sha512-Vu4a5UFA9rIIFJ7rB/Vaafh9lrCQszopTCx6KjFboXTGQbPNasehVR5TEiithSDGyd1DEiUByggTZsg8jukeIg==}
 
-  amdefine@1.0.1:
-    resolution: {integrity: sha512-S2Hw0TtNkMJhIabBwIojKL9YHO5T0n5eNqWJ7Lrlel/zDbftQpxpapi8tZs3X1HWa+u+QeydGmzzNU0m09+Rcg==}
-    engines: {node: '>=0.4.2'}
-
   ansi-regex@6.2.2:
     resolution: {integrity: sha512-Bq3SmSpyFHaWjPk8If9yc6svM8c56dB5BAtW4Qbw5jHTwwXXcTLoRMkpDJp6VL0XzlWaCHTXrkFURMYmD0sLqg==}
     engines: {node: '>=12'}
@@ -403,9 +396,6 @@ packages:
   balanced-match@4.0.4:
     resolution: {integrity: sha512-BLrgEcRTwX2o6gGxGOCNyMvGSp35YofuYzw9h1IMTRmKqttAZZVU67bdb9Pr2vUHA8+j3i2tJfjO6C6+4myGTA==}
     engines: {node: 18 || 20 || >=22}
-
-  bluebird@2.9.21:
-    resolution: {integrity: sha512-oB1w+/AVKfY5TqqIJBsIbxWumpzllje1HbLAOSAi/gfe8VkRFMLcqQPofKBv6D515kH790cYXzy7YF8Cfzjelw==}
 
   brace-expansion@5.0.9:
     resolution: {integrity: sha512-ScQ4IuvIEF1TMlP7Zt+vjJ//9zlPb2SDcxWxM3bk8s6t6GGdJ7KO1dCcTidOPJKePW30LE/2cT7wCyPho9/Wxg==}
@@ -424,9 +414,6 @@ packages:
   cliui@9.0.1:
     resolution: {integrity: sha512-k7ndgKhwoQveBL+/1tqGJYNz097I7WOvwbmmU2AR5+magtbjPWQTS1C5vzGkBC8Ym8UWRzfKUzUUqFLypY4Q+w==}
     engines: {node: '>=20'}
-
-  convert-source-map@1.2.0:
-    resolution: {integrity: sha512-S8g9WfpATYd4Qajgygr9CsIRSvd+omrKmaqLE0Lz4dSWprOFpWSqYTrXBTNrYqM+x4OaLlFWhJSOJHU8vuU1wA==}
 
   convert-source-map@2.0.0:
     resolution: {integrity: sha512-Kvp459HrV2FEJ1CAsi1Ku+MY3kasH19TFykTz2xWmMeq6bk2NU3XXvfJ+Q61m0xktWwt+1HSYf3JZsTms3aRJg==}
@@ -520,12 +507,6 @@ packages:
     resolution: {integrity: sha512-HGYWWS/ehqTV3xN10i23tkPkpH46MLCIMFNCaaKNavAXTF1RkqxawEPtnjnGZ6XKSInBKkiOA5BKS+aZiY3AvA==}
     engines: {node: '>=8'}
 
-  lcov-parse@0.0.9:
-    resolution: {integrity: sha512-fDfrsam/Z5t2hZMR+NF5i87ReYJP8YRisV+YIQQwAg/RxzicKUOP5S9IABkUZn/UbMd+gbreOIQqEflxc3wkKA==}
-
-  lcov-sourcemap-x@0.3.3:
-    resolution: {integrity: sha512-8tgYjcr6O5FFwKHEvDwEeDfX/tzukdgcn2N7VHLyBokgGdY1fAWDfIa/Vk1zFjpxfHWfvjR2LndNTmOoxHJTRg==}
-
   lightningcss-android-arm64@1.33.0:
     resolution: {integrity: sha512-gEpRTalKdosp4Bb8qWtc2iOgE5SeIHlpS1up9bFq2wAyYhl1UdTObYiHe98zEM9SQvSoqQZ1IQD0JNpg3Ml5pg==}
     engines: {node: '>= 12.0.0'}
@@ -599,9 +580,6 @@ packages:
   locate-path@6.0.0:
     resolution: {integrity: sha512-iPZK6eYjbxRu3uB4/WZ3EsEIMJFMqAoopl3R+zuq0UjcAm/MO6KCweDgPfP3elTztoKP3KtnVHxTn2NHBSDVUw==}
     engines: {node: '>=10'}
-
-  lodash@3.6.0:
-    resolution: {integrity: sha512-fysFKsJtaOtRGZT/b3Xx03iyEmO0zjU+d1HBH5NcEaUjtg7XO0wDY5I7IJFfr2rguJt0Rve2V32426Za3zYyRw==}
 
   lru-cache@11.5.2:
     resolution: {integrity: sha512-4pfM1Ff0x50o0tQwb5ucw/RzNyD0/YJME6IVcStalZuMWxdt3sR3huStTtxz4PUmvZfRguvDejasvQ2kifR11g==}
@@ -693,10 +671,6 @@ packages:
   source-map-js@1.2.1:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
     engines: {node: '>=0.10.0'}
-
-  source-map@0.4.2:
-    resolution: {integrity: sha512-gPYyTI9C5vzUyavo23otNfekXxaSM7vUlpkPaymnD3mMtrvb9hHK7fukct2GuMboxmHjeoeJ0JelmZcV6DcAPw==}
-    engines: {node: '>=0.8.0'}
 
   string-width@7.2.0:
     resolution: {integrity: sha512-tsaTIkKW9b4N+AEj+SVA+WhJzV7/zMhcSu78mLKWSk7cXMOSHsBKFWUs0fWwq8QyK3MgJBQRX6Gbi4kYbdvGkQ==}
@@ -1047,15 +1021,11 @@ snapshots:
     dependencies:
       undici-types: 8.3.0
 
-  amdefine@1.0.1: {}
-
   ansi-regex@6.2.2: {}
 
   ansi-styles@6.2.3: {}
 
   balanced-match@4.0.4: {}
-
-  bluebird@2.9.21: {}
 
   brace-expansion@5.0.9:
     dependencies:
@@ -1080,8 +1050,6 @@ snapshots:
       string-width: 7.2.0
       strip-ansi: 7.2.0
       wrap-ansi: 9.0.2
-
-  convert-source-map@1.2.0: {}
 
   convert-source-map@2.0.0: {}
 
@@ -1157,16 +1125,6 @@ snapshots:
       html-escaper: 2.0.2
       istanbul-lib-report: 3.0.1
 
-  lcov-parse@0.0.9: {}
-
-  lcov-sourcemap-x@0.3.3:
-    dependencies:
-      bluebird: 2.9.21
-      convert-source-map: 1.2.0
-      lcov-parse: 0.0.9
-      lodash: 3.6.0
-      source-map: 0.4.2
-
   lightningcss-android-arm64@1.33.0:
     optional: true
 
@@ -1219,8 +1177,6 @@ snapshots:
   locate-path@6.0.0:
     dependencies:
       p-locate: 5.0.0
-
-  lodash@3.6.0: {}
 
   lru-cache@11.5.2: {}
 
@@ -1336,10 +1292,6 @@ snapshots:
   signal-exit@4.1.0: {}
 
   source-map-js@1.2.1: {}
-
-  source-map@0.4.2:
-    dependencies:
-      amdefine: 1.0.1
 
   string-width@7.2.0:
     dependencies:
